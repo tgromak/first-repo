@@ -5,3 +5,9 @@
 {% block headline %}This is my headline{% endblock %}
 {% block byline %}by Tom Gromak{% endblock %}
 {% block pubdate %}March 7, 2020{% endblock %}
+
+{% block content %}
+{% for obj in site.data.harvard_park_homicides %}
+  {{ obj.first_name }} {{ obj.last_name }}<br>
+{% endfor %}
+{% endblock %}
